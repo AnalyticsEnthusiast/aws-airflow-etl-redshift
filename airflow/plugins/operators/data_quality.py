@@ -13,6 +13,9 @@ class DataQualityOperator(BaseOperator):
     
     Init Arguments: 
         redshift_conn_id - Connection string to Redshift
+        rows_greater_than_0 - SQL string to be executed
+        check_duplicates - SQL string to be executed
+        top_10_users_by_distinct_session - SQL string to be executed
     """
     ui_color = '#89DA59'
 
