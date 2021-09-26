@@ -21,7 +21,7 @@ Directory structure:
 <br>
 
 | File Name             | File Type  | Description                               |  
-|--------------------  :|:----------:|:-----------------------------------------:|
+|----------------------:|:----------:|:-----------------------------------------:|
 | create_tables.sql     | SQL        | List of SQL DDL SQL Queries               |
 | sparkify_dag.py       | python     | Main Airflow DAG                          |
 | quality_check_dag.py  | python     | Test DAG for Checking Data Quality        |
