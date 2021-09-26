@@ -16,7 +16,7 @@
 
 #### Project Description
 
-Directory structure:
+Main project files
 
 <br>
 
@@ -36,6 +36,14 @@ Directory structure:
 
 ### Project Setup
 
+Airflow Variable Setup:
+
+1. "aws_credentials" - Contains the Key and Secret key of user allowed to access s3 on behalf of Redshift.
+
+2. "redshift"- Contains details of redshift cluster, hostname, port, schema, username & password
+
+<br>
+
 For test purposes the following variables have been hard coded just for POC. In a normal production environment these would be parameterized:
 
 In the **StageToRedshiftOperator** the year and month variables have been hard coded in the DAG to "2018" and "11". In production these would be dynamically generated to the year and month of the execution date.
@@ -43,14 +51,6 @@ In the **StageToRedshiftOperator** the year and month variables have been hard c
 In the **LoadFactOperator** the test variable is set to "true". This truncates the fact table before loading which makes testing much easier. In a production system this would would be set to "false" as fact tables are too large to truncate each time.
 
 In the python file **sql_create_tables.py** the SQL statements contain "DROP TABLE IF EXISTS public.table_name;". This is for test purposes only, not suitable for production tables.
-
-<br>
-
-Airflow Variable Setup:
-
-1. "aws_credentials" - Contains the Key and Secret key of user allowed to access s3 on behalf of Redshift.
-
-2. "redshift"- Contains details of redshift cluster, hostname, port, schema, username & password
 
 <br>
 

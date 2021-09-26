@@ -63,8 +63,8 @@ default_args = {
 with DAG('Sparkify_Data_Warehouse_ETL',
           default_args=default_args,
           description='Load and transform data in Redshift with Airflow',
-          #schedule_interval='0 * * * *',
-          schedule_interval=None
+          schedule_interval='0 * * * *',
+          #schedule_interval=None
         ) as dag:
     
     
