@@ -54,7 +54,7 @@ airflow
     └── __pycache__
         └── __init__.cpython-36.pyc
 
-
+|                       |            |                                           |
 | File Name             | File Type  | Description                               |  
 |--------------------  :|:----------:|:-----------------------------------------:|
 | create_tables.sql     | SQL        | List of SQL DDL SQL Queries               |
