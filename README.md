@@ -20,41 +20,6 @@ Directory structure:
 
 <br>
 
-airflow
-├── create_tables.sql
-├── dags
-│   ├── __pycache__
-│   │   ├── quality_check_dag.cpython-36.pyc
-│   │   └── sparkify_dag.cpython-36.pyc
-│   ├── quality_check_dag.py
-│   └── sparkify_dag.py
-└── plugins
-    ├── helpers
-    │   ├── __init__.py
-    │   ├── __pycache__
-    │   │   ├── __init__.cpython-36.pyc
-    │   │   ├── sql_create_tables.cpython-36.pyc
-    │   │   ├── sql_insert_queries.cpython-36.pyc
-    │   │   └── sql_queries.cpython-36.pyc
-    │   ├── sql_create_tables.py
-    │   └── sql_insert_queries.py
-    ├── __init__.py
-    ├── operators
-    │   ├── data_quality.py
-    │   ├── __init__.py
-    │   ├── load_dimension.py
-    │   ├── load_fact.py
-    │   ├── __pycache__
-    │   │   ├── data_quality.cpython-36.pyc
-    │   │   ├── __init__.cpython-36.pyc
-    │   │   ├── load_dimension.cpython-36.pyc
-    │   │   ├── load_fact.cpython-36.pyc
-    │   │   └── stage_redshift.cpython-36.pyc
-    │   └── stage_redshift.py
-    └── __pycache__
-        └── __init__.cpython-36.pyc
-
-|                       |            |                                           |
 | File Name             | File Type  | Description                               |  
 |--------------------  :|:----------:|:-----------------------------------------:|
 | create_tables.sql     | SQL        | List of SQL DDL SQL Queries               |
