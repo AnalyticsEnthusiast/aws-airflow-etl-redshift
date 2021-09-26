@@ -84,8 +84,8 @@ with DAG('Sparkify_Data_Warehouse_ETL',
         year="2018", # Hard Coded as 2018 for POC
         month="11", # Hard Coded as 11 for POC
         params={
-            "year": str(START_DATE.year),
-            "month": str(START_DATE.month)
+            "year": "",
+            "month": "" 
         }
     )
 
@@ -100,8 +100,8 @@ with DAG('Sparkify_Data_Warehouse_ETL',
         year="2018", # Hard Coded as 2018 for POC
         month="11", # Hard Coded as 11 for POC
         params={
-            "year": str(START_DATE.year),
-            "month": str(START_DATE.month)
+            "year": "",
+            "month": "" 
         }
     )
 
