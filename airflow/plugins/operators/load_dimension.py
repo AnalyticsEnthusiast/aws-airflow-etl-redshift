@@ -15,6 +15,7 @@ class LoadDimensionOperator(BaseOperator):
     Init Arguments:
         redshift_conn_id - Redshift connection string
         table - Dimension table name
+        append_only - Option for appending to dimension table or truncating data before loading
     """
     truncate_table = """DELETE FROM public.{};"""
     

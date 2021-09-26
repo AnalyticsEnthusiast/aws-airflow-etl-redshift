@@ -18,6 +18,8 @@ class StageToRedshiftOperator(BaseOperator):
         table - String name of staging table
         s3_bucket - String of bucket name in S3
         s3_key - String of key path in S3
+        year - Year of log files to load
+        month - Month of log files to load
     """
     ui_color = '#358140'
     

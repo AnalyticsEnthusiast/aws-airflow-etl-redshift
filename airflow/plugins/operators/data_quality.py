@@ -9,7 +9,7 @@ import logging
 
 class DataQualityOperator(BaseOperator):
     """
-    Description: Class to check if the data has been loaded correctly but ETL pipeline.
+    Description: Class to check if data has been loaded correctly by ETL pipeline.
     
     Init Arguments: 
         redshift_conn_id - Connection string to Redshift
