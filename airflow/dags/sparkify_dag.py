@@ -130,9 +130,9 @@ with DAG("Sparkify_Data_Warehouse_ETL",
     run_quality_checks = DataQualityOperator(
         task_id="Run_data_quality_checks",
         redshift_conn_id="redshift",
-        rows_greater_than_0 = rows_greater_than_0,
-        check_duplicates = check_duplicates,
-        top_10_users_by_distinct_session = top_10_users_by_distinct_session,
+        rows_greater_than_0 = DataQualitySqlQueries.rows_greater_than_0,
+        check_duplicates = DataQualitySqlQueries.check_duplicates,
+        top_10_users_by_distinct_session = DataQualitySqlQueries.top_10_users_by_distinct_session
     )
 
     
