@@ -54,7 +54,7 @@ class LoadDimensionOperator(BaseOperator):
     def process(self, redshift):
         """
         Description:
-            Checks which dimension to run against
+            Runs the load steps for dimension tables
         
         Arguments:
             redshift - Redshift connection string object
@@ -62,31 +62,12 @@ class LoadDimensionOperator(BaseOperator):
         Returns:
             None
         """
-        if self.table == 'time':
-            redshift.run(CreateSqlQueries.create_time_table)
-            if self.append_only == "false":
-                    self.truncate(redshift)
-            redshift.run(InsertSqlQueries.time_table_insert)
-        elif self.table == 'users':
-            redshift.run(CreateSqlQueries.create_users_table)
-            if self.append_only == "false":
-                    self.truncate(redshift)
-            redshift.run(InsertSqlQueries.users_table_insert)
-        elif self.table == 'artists':
-            redshift.run(CreateSqlQueries.create_artists_table)
-            if self.append_only == "false":
-                    self.truncate(redshift)
-            redshift.run(InsertSqlQueries.artists_table_insert)
-        elif self.table == 'songs':
-            redshift.run(CreateSqlQueries.create_songs_table)
-            if self.append_only == "false":
-                    self.truncate(redshift)
-            redshift.run(InsertSqlQueries.songs_table_insert)
-        else:
-            print("Dim Table name not valid")
-            raise
-    
-    
+        redshift.run(getattr(CreateSqlQueries, f"create_{self.table}_table"))
+        if self.append_only == "false":
+            self.truncate(redshift)
+        redshift.run(getattr(InsertSqlQueries, f"{self.table}_table_insert"))
+   
+
     def execute(self, context):
         """
         Description:

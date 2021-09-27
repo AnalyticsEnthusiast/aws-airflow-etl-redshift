@@ -16,5 +16,6 @@ class UdacityPlugin(AirflowPlugin):
     ]
     helpers = [
         helpers.CreateSqlQueries,
-        helpers.InsertSqlQueries
+        helpers.InsertSqlQueries,
+        helpers.DataQualitySqlQueries
     ]
