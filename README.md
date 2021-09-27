@@ -20,17 +20,17 @@ Main project files
 
 <br>
 
-| File Name             | File Type  | Description                               |  
-|----------------------:|:----------:|:-----------------------------------------:|
-| create_tables.sql     | SQL        | List of SQL DDL SQL Queries               |
-| sparkify_dag.py       | python     | Main Airflow DAG                          |
-| quality_check_dag.py  | python     | Test DAG for Checking Data Quality        |
-| sql_create_tables.py  | python     | Python Class with Create table statements |
-| sql_insert_queries.py | python     | Python Class to insert data into tables   |
-| data_quality.py       | python     | Airfow Operator to check data quality     |
-| load_dimension.py     | python     | Airflow Operator to load dimension tables |
-| load_fact.py          | python     | Airflow Operator to load fact table       |
-| stage_redshift.py     | python     | Airflow Operator to load staging tables   |
+| File Name             | File Type  | Description                                 |  
+|----------------------:|:----------:|:-------------------------------------------:| 
+| create_tables.sql     | SQL        | List of SQL DDL SQL Queries                 |
+| sparkify_dag.py       | python     | Main Airflow DAG                            |
+| sql_create_tables.py  | python     | Python Class with Create table statements   |
+| sql_insert_queries.py | python     | Python Class to insert data into tables     |
+| sql_quality_check.py  | python     | Python Class for performing data quailty SQL|
+| data_quality.py       | python     | Airfow Operator to check data quality       |
+| load_dimension.py     | python     | Airflow Operator to load dimension tables   |
+| load_fact.py          | python     | Airflow Operator to load fact table         |
+| stage_redshift.py     | python     | Airflow Operator to load staging tables     |
 
 <br>
 
