@@ -1,19 +1,19 @@
 class DataQualitySqlQueries:
 
-   rows_greater_than_0 = """
+    rows_greater_than_0 = ("""
         SELECT 
              COUNT(*) 
         FROM public.{};
-    """
+    """)
     
-    check_duplicates = """
+    check_duplicates = ("""
         SELECT 
             COUNT({}_id) as cnt,
             COUNT(DISTINCT {}_id) as dist_cnt 
         FROM public.{}s;
-    """
+    """)
     
-    top_10_users_by_distinct_session = """
+    top_10_users_by_distinct_session = ("""
                 SELECT
                     u.first_name,
                     u.last_name,
@@ -28,5 +28,5 @@ class DataQualitySqlQueries:
                     sp.user_id
                 ORDER BY session_count DESC
                 LIMIT 10;
-                """
+                """)
 
